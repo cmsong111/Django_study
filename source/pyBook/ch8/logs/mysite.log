@@ -1,0 +1,24 @@
+[20/May/2018 16:11:32] DEBUG [polls.views:34] vote().question_id: 1
+[20/May/2018 16:12:14] DEBUG [polls.views:34] vote().question_id: 3
+[20/May/2018 16:12:21] DEBUG [polls.views:34] vote().question_id: 2
+[20/May/2018 16:17:57] DEBUG [polls.views:34] vote().question_id: 1
+[04/ 7월/2018 13:15:45] DEBUG [polls.views:34] vote().question_id: 2
+[04/ 7월/2018 13:15:49] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:16:34] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:17:28] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:18:41] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:19:35] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:20:37] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:53:00] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 20:53:04] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 21:49:42] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 21:49:56] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 21:50:36] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 21:57:05] DEBUG [polls.views:34] vote().question_id: 2
+[05/Jul/2018 22:05:14] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:07:50] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:07:55] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:18:21] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:18:25] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:28:40] DEBUG [polls.views:34] vote().question_id: 2
+[07/Jul/2018 09:28:42] DEBUG [polls.views:34] vote().question_id: 2

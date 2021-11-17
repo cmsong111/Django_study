@@ -1,0 +1,4 @@
+[20/May/2018 16:11:32] DEBUG [polls.views:34] vote().question_id: 1
+[20/May/2018 16:12:14] DEBUG [polls.views:34] vote().question_id: 3
+[20/May/2018 16:12:21] DEBUG [polls.views:34] vote().question_id: 2
+[20/May/2018 16:17:57] DEBUG [polls.views:34] vote().question_id: 1

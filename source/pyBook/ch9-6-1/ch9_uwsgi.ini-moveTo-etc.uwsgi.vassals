@@ -1,0 +1,13 @@
+[uwsgi]
+chdir = /home/shkim/pyBook/ch9
+home = /home/shkim/VENV/v3PyBook
+module = mysite.wsgi:application
+socket = :8001
+# socket = /home/shkim/pyBook/ch9/www_dir/ch9.sock
+# chmod-socket = 666
+master = True
+processes = 5
+pidfile = /tmp/ch9-master.pid
+vacuum = True
+max-requests = 5000
+daemonize = /var/log/uwsgi/ch9.log

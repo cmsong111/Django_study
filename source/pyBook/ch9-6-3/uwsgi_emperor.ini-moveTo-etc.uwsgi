@@ -1,0 +1,9 @@
+[uwsgi]
+emperor = /etc/uwsgi/vassals
+uid = shkim
+gid = shkim
+master = True
+pidfile = /tmp/emperor.pid
+vacuum = True
+daemonize = /var/log/uwsgi/emperor.log
+

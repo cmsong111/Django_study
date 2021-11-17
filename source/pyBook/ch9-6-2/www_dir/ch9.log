@@ -1,0 +1,89 @@
+*** Starting uWSGI 2.0.17 (64bit) on [Sun Jun 17 19:36:05 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 20 April 2018 07:42:53
+os: Linux-3.10.0-862.3.2.el7.x86_64 #1 SMP Mon May 21 23:36:36 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/shkim/pyBook/ch9/www_dir
+writing pidfile to /tmp/ch9-master.pid
+detected binary path: /home/shkim/VENV/v3PyBook/bin/uwsgi
+chdir() to /home/shkim/pyBook/ch9
+your processes number limit is 3837
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.5 (default, Apr 10 2018, 17:08:37)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+PEP 405 virtualenv detected: /home/shkim/VENV/v3PyBook
+Set PythonHome to /home/shkim/VENV/v3PyBook
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x93bc90
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x93bc90 pid: 19801 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 19801)
+spawned uWSGI worker 1 (pid: 19803, cores: 1)
+spawned uWSGI worker 2 (pid: 19804, cores: 1)
+spawned uWSGI worker 3 (pid: 19805, cores: 1)
+spawned uWSGI worker 4 (pid: 19806, cores: 1)
+spawned uWSGI worker 5 (pid: 19807, cores: 1)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
+*** Starting uWSGI 2.0.17 (64bit) on [Sat Jul 21 09:01:49 2018] ***
+compiled with version: 4.8.5 20150623 (Red Hat 4.8.5-16) on 20 April 2018 08:19:18
+os: Linux-3.10.0-862.6.3.el7.x86_64 #1 SMP Tue Jun 26 16:32:21 UTC 2018
+nodename: localhost.localdomain
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/shkim/pyBook/ch9
+writing pidfile to /tmp/ch9-master.pid
+detected binary path: /usr/bin/uwsgi
+chdir() to /home/shkim/pyBook/ch9
+your processes number limit is 3837
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to TCP address :8001 fd 3
+Python version: 3.6.5 (default, Apr 10 2018, 17:08:37)  [GCC 4.8.5 20150623 (Red Hat 4.8.5-16)]
+PEP 405 virtualenv detected: /home/shkim/VENV/v3PyBook
+Set PythonHome to /home/shkim/VENV/v3PyBook
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x880bf0
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437520 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 1 seconds on interpreter 0x880bf0 pid: 13502 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 13502)
+spawned uWSGI worker 1 (pid: 13505, cores: 1)
+spawned uWSGI worker 2 (pid: 13506, cores: 1)
+spawned uWSGI worker 3 (pid: 13507, cores: 1)
+spawned uWSGI worker 4 (pid: 13508, cores: 1)
+spawned uWSGI worker 5 (pid: 13509, cores: 1)
+[pid: 13508|app: 0|req: 1/1] 192.168.56.1 () {42 vars in 786 bytes} [Sat Jul 21 09:12:57 2018] GET / => generated 599 bytes in 265 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 13508|app: 0|req: 2/2] 192.168.56.1 () {44 vars in 841 bytes} [Sat Jul 21 09:13:02 2018] GET /polls/ => generated 802 bytes in 67 msecs (HTTP/1.1 200) 3 headers in 109 bytes (1 switches on core 0)
+[pid: 13508|app: 0|req: 3/3] 192.168.56.1 () {44 vars in 851 bytes} [Sat Jul 21 09:13:04 2018] GET /polls/2/ => generated 955 bytes in 35 msecs (HTTP/1.1 200) 5 headers in 277 bytes (1 switches on core 0)
+SIGINT/SIGQUIT received...killing workers...
+worker 1 buried after 1 seconds
+worker 2 buried after 1 seconds
+worker 3 buried after 1 seconds
+worker 4 buried after 1 seconds
+worker 5 buried after 1 seconds
+goodbye to uWSGI.
+VACUUM: pidfile removed.
