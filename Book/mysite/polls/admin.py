@@ -1,11 +1,8 @@
 from django.contrib import admin
-from .models import Question,Choice
+from polls.models import Question, Choice
+
+# Register your models here.
 
 admin.site.register(Question)
 admin.site.register(Choice)
 
-class QuestionAdmin(admin.ModelAdmin):
-    filedsets = [
-        ('Question Statement', {'fields': ['question_text']}),
-        ('Date Infromation', {'fields': ['pub_date'], 'classes': ['collapse']}),
-    ]
