@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'polls.apps.PollsConfig',		# shkim
-    'books.apps.BooksConfig',
+    'books',
 ]
 
 MIDDLEWARE = [

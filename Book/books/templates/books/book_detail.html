@@ -4,14 +4,14 @@
 
 <h1>{{ object.title }}</h1>
 <br>
-<li>Authors: 
+<li>저자: 
 {% for author in object.authors.all %}
   {{ author }}
   {% if not forloop.last %},{% else %}{% endif %}
 {% endfor %}
 </li>
 
-<li>Publisher: {{ object.publisher }}</li>
-<li>Publication date: {{ object.publication_date }}</li>
+<li>출판사: {{ object.publisher }}</li>
+<li>출판일: {{ object.publication_date }}</li>
 
 {% endblock content %}
