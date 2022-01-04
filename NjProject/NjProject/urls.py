@@ -23,7 +23,7 @@ import account.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-
+    #로그인 관련 url
     path('login/', account.views.login, name='login'),
     path('signup/', account.views.signup, name='signup'),
     path('logout/', account.views.logout, name='logout'),

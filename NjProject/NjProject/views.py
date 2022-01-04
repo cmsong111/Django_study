@@ -5,4 +5,4 @@ from django.apps import apps
 #--- TemplateView
 class HomeView(TemplateView):
 
-    template_name = 'NjProject/templates/home.html'
+    template_name = 'home.html'
