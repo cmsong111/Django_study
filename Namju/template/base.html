@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'admin/css/base.css' %}" />
+    <title>{% block title %}Namju's To Do List{% endblock %}</title>
+</head>
+
+<body>
+    <div id="sidebar">
+        {% block sidebar %}
+        <ul>
+            <li><a href="/">Project_Home</a></li>
+            <li><a href="/admin/">Admin</a></li>
+        </ul>
+        {% endblock %}
+        <br>
+    </div>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>
