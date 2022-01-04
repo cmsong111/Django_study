@@ -17,13 +17,17 @@ from django.contrib import admin
 from django.urls import path
 from django.urls.conf import include
 from NjProject import views
+import account.views
 
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    path('login/', account.views.login, name='login'),
+    path('signup/', account.views.signup, name='signup'),
+    path('logout/', account.views.logout, name='logout'),
+
     path('', views.HomeView.as_view(), name = 'home'),
-    path('account/',include('account.ulrs')),
 
 ]
