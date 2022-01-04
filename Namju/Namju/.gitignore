@@ -1,5 +1,3 @@
-.DS_Store
-
 # Created by https://www.toptal.com/developers/gitignore/api/django,macos,windows,python
 # Edit at https://www.toptal.com/developers/gitignore?templates=django,macos,windows,python
 
@@ -270,4 +268,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-secrets.json
