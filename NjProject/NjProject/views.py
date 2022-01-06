@@ -6,3 +6,4 @@ from django.apps import apps
 class HomeView(TemplateView):
 
     template_name = 'home.html'
+

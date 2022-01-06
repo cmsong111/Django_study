@@ -30,4 +30,7 @@ urlpatterns = [
 
     path('', views.HomeView.as_view(), name = 'home'),
 
+    #todolist
+    path('todolist/', include('todolist.urls')),
+
 ]

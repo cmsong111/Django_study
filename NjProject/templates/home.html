@@ -19,6 +19,7 @@
             <form id="logout" method="POST" action="{% url 'logout' %}">
                 {% csrf_token %} <input type="hidden" />
             </form>
+            
             {% else %}
             <a href="{% url 'signup' %}">회원가입</a>
             <a href="{% url 'login' %}">로그인</a>
@@ -27,6 +28,12 @@
         {% endblock %}
         <br>
     </div>
+
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+
 
 </body>
 
