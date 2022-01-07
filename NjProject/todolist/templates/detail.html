@@ -1,0 +1,23 @@
+{% extends "home.html" %}
+
+
+{% block content %}
+
+<h3>제목</h3>
+<h1>{{ object.TodoList_text }}</h1>
+<h3>내용</h3>
+<p>{{ object.TodoList_content }}</p>
+<h3>시간</h3>
+<p>{{ object.TodoList_when }}</p>
+<h3>완료여부</h3>
+{% if object.TodoList_bool %}
+<p>완료</p>
+{% else %}
+<p>미완료</p>
+{% endif %}
+
+<h3>장소</h3>
+<p>{{ object.TodoList_where }}</p>
+
+
+{% endblock content %}

@@ -12,6 +12,9 @@ class TodoList(models.Model):
     TodoList_when = models.DateTimeField('target time')
     #TodoList 했는지 안했는지 체크
     TodoList_bool = models.BooleanField(default=False)
+    #todoList 위치
+    TodoList_where = models.TextField(blank=True)
+
     #사용자 확인
     user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
 
