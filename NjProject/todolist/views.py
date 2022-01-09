@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.views.generic.base import TemplateView
 from django.views.generic import ListView
 from django.views.generic import DetailView
+from django.views import generic
 from todolist.models import TodoList
 from django.shortcuts import get_object_or_404, render
 
@@ -11,15 +12,14 @@ from django.shortcuts import get_object_or_404, render
 
 #def index(request):
 
-class todolistmodelView(TemplateView):
+
+class IndexView(generic.ListView):
     template_name = 'index.html'
+    context_object_name = 'latest_todolist_list'
 
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['model_list'] = ['TodoList']
-        #context = TodoList.objects.filter(user=User.get_username)
-        return context
-
+    def get_queryset(self):
+        """Return the last all published questions."""
+        return TodoList.objects.order_by('-TodoList_when')[:]
 
 class todolistDetail(DetailView):
     template_name = 'detail.html'

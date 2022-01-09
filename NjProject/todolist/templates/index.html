@@ -1,13 +1,17 @@
 {% extends "home.html" %}
 
-{% block context %}
+{% block content %}
 
-    <h2> Todolist system</h2>
+<h2>Polls Question List</h2>
+
+{% if latest_todolist_list %}
     <ul>
-        {% for modelname in model_list %}
-{% with "Todolist:"|add:modelname|lower|add:"_list" as urlvar %}
-            <li><a href="{% url urlvar %}">{{modelname}}</a></li>
-{% endwith %}
-        {% endfor %}        
+    {% for TodoList in latest_todolist_list %}
+        <li><a href="{% url 'todolist:detail' TodoList.id %}">{{ TodoList.TodoList_text }}</a></li>
+    {% endfor %}
     </ul>
+{% else %}
+    <p>No todolist are available.</p>
+{% endif %}
+
 {% endblock %}
