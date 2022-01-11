@@ -19,5 +19,7 @@
 <h3>장소</h3>
 <p>{{ object.TodoList_where }}</p>
 
+<br>
+<a href="{% url 'todolist:edit' todolist.id %}">수정하기</a>
 
 {% endblock content %}

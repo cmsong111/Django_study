@@ -5,6 +5,7 @@ from django.views.generic import DetailView
 from django.views import generic
 from todolist.models import TodoList
 from django.shortcuts import get_object_or_404, render
+from django.http import HttpResponseRedirect
 
 #from account.models import User
 
@@ -18,10 +19,13 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_todolist_list'
 
     def get_queryset(self):
-        """Return the last all published questions."""
         return TodoList.objects.order_by('-TodoList_when')[:]
 
 class todolistDetail(DetailView):
     template_name = 'detail.html'
+    model = TodoList
+
+class todolistedit(DetailView):
+    template_name = 'edit.html'
     model = TodoList
 

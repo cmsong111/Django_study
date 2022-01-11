@@ -1,0 +1,29 @@
+{% extends "home.html" %}
+
+
+{% block content %}
+
+<h3>제목</h3>
+<input type = "text" name = "TodoList_text" value="{{ object.TodoList_text }}" />
+<h3>내용</h3>
+<input type = "text" name = "TodoList_content" value="{{ object.TodoList_content }}" style="width: 500px ;height: 300px;" />
+<h3>시간</h3>
+<input type="date" id="start1" name="trip-TodoList_when" value={{ object.TodoList_when|date:'Y-m-d' }} >
+<input type="time" id="start2" name="trip-TodoList_when" value={{ object.TodoList_when|time:'h-i' }} >
+
+
+<p>{{ object.TodoList_when }}</p>
+<h3>완료여부</h3>
+{% if object.TodoList_bool %}
+<input type="checkbox" name="TodoList_bool" value="HTML" checked >
+{% else %}
+<input type="checkbox" name="TodoList_bool" value="HTML"  >
+
+{% endif %}
+
+<h3>장소</h3>
+<input type = "text" name = "TodoList_text" value="{{ object.TodoList_where }}" />
+
+<br>
+<input type="submit" value="저장하기">
+{% endblock content %}

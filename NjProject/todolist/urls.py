@@ -10,4 +10,8 @@ urlpatterns = [
     
     #todolist/99
     path('<int:pk>/', views.todolistDetail.as_view(), name = 'detail'),
+
+    #todolist/99/edit
+    path('<int:pk>/edit', views.todolistedit.as_view(), name = 'edit'),
+
 ]
