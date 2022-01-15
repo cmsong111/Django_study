@@ -2,16 +2,38 @@
 
 {% block content %}
 
+
 <h2>todolist List</h2>
 
-{% if latest_todolist_list %}
-    <ul>
-    {% for TodoList in latest_todolist_list %}
-        <li><a href="{% url 'todolist:detail' TodoList.id %}">{{ TodoList.TodoList_text }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No todolist are available.</p>
-{% endif %}
+<div class="container my-3">
+    <table class="table">
+        <thead>
+        <tr class="thead-dark">
+            <th>번호</th>
+            <th>제목</th>
+            <th>목표시간</th>
+            <th>작성자</th>
+        </tr>
+        </thead>    
+        <tbody>
+            {% if latest_todolist_list %}
+            {% for TodoList in latest_todolist_list %}
+        <tr>
+            <td>{{ forloop.counter }}</td>
+            <td>
+                <a href="{% url 'todolist:detail' TodoList.id %}">{{ TodoList.TodoList_text }}</a>
+            </td>
+            <td>{{ todolist.TodoList_when }}</td>
+            <td>{{ todolist.user }}</td>
+        </tr>
+        {% endfor %}
+        {% else %}
+        <tr>
+            <td colspan="3">질문이 없습니다.</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+</div
 
 {% endblock %}

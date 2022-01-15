@@ -7,7 +7,10 @@ app_name = 'todolist'
 urlpatterns = [
     #todolist/
     path('', views.IndexView.as_view(), name = 'index'),
-    
+
+    #todolist/new
+    path('new/', views.todolistnew, name = 'new'),
+
     #todolist/99
     path('<int:pk>/', views.todolistDetail.as_view(), name = 'detail'),
 
