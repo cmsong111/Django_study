@@ -21,7 +21,7 @@ class IndexView(generic.ListView):
     context_object_name = 'latest_todolist_list'
 
     def get_queryset(self):
-        return TodoList.objects.order_by('-TodoList_when')[:]
+        return TodoList.objects.order_by('TodoList_when')[:]
 
 class todolistDetail(DetailView):
     template_name = 'detail.html'

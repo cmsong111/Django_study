@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<a href="{% url 'todolist:new' %}">새로 만들기</a>
 
 <h2>todolist List</h2>
 
@@ -9,7 +10,7 @@
     <table class="table">
         <thead>
         <tr class="thead-dark">
-            <th>번호</th>
+            <th>우선순위</th>
             <th>제목</th>
             <th>목표시간</th>
             <th>작성자</th>
@@ -23,13 +24,13 @@
             <td>
                 <a href="{% url 'todolist:detail' TodoList.id %}">{{ TodoList.TodoList_text }}</a>
             </td>
-            <td>{{ todolist.TodoList_when }}</td>
-            <td>{{ todolist.user }}</td>
+            <td>{{ TodoList.TodoList_when }}</td>
+            <td>{{ TodoList.user }}</td>
         </tr>
         {% endfor %}
         {% else %}
         <tr>
-            <td colspan="3">질문이 없습니다.</td>
+            <td colspan="3">No Todolist</td>
         </tr>
         {% endif %}
         </tbody>

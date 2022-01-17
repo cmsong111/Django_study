@@ -10,9 +10,10 @@
 <body>
     <div id="sidebar">
         {% block sidebar %}
+        
+        &nbsp;&nbsp;&nbsp;&nbsp;<a href="/">홈 화면으로</a>
+        <a href="/admin/">Admin</a>
         <ul>
-            <li><a href="/">홈 화면으로</a></li>
-            <li><a href="/admin/">Admin</a></li>
             {% if user.is_authenticated %}
             <p>{{ user.username }}</p>
             <a href="javascript:{document.getElementById('logout').submit()}">로그아웃</a>
