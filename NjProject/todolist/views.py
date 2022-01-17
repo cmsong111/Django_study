@@ -1,6 +1,7 @@
 from django.views.generic import DetailView
 from django.http import HttpResponse
 from django.views import generic
+from NjProject.todolist.forms import todolist_new
 import todolist
 from todolist.models import TodoList
 from django.shortcuts import get_object_or_404, render
@@ -38,10 +39,10 @@ def todolistnew(request):
 
 def post(request):
     if request.method == 'POST':
+        form = todolist_new(request.POST)
         tmp = todolist(user=request.user.username, Todolist_text=request.POST.get('Todolist_text'), TodoList_content=request.POST.get('TodoList_content'),TodoList_when=request.POST.get('TodoList_when'),TodoList_where = request.POST.get('TodoList_where'))
         tmp.save()
         return redirect('todolist:index')
     else:
         temp = TodoList.objects.all()
-        return render(request, 'index.html', {'todolist:index'})
-
+        return render(request, 'index.html', {'todolist:index'})    
