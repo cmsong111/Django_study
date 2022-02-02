@@ -1,5 +1,4 @@
 from django.db import models
-from django.db.models.base import Model
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -16,7 +15,7 @@ class TodoList(models.Model):
     TodoList_where = models.TextField(blank=True)
 
     #사용자 확인
-    user = models.ForeignKey(User, on_delete=models.CASCADE, null=False)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
 
     #todoList 제목으로 출력
     def __str__(self):

@@ -9,9 +9,12 @@ https://docs.djangoproject.com/en/3.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
+
 from django.core.exceptions import ImproperlyConfigured
 from pathlib import Path
 import os, json
+import datetime
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -99,6 +102,7 @@ DATABASES = {
 }
 
 
+
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
 
@@ -143,3 +147,22 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static')  # static 파일들을 어디에 
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+
+    'DEFAULT_AUTHENTICATION_CLASSES' : [
+        'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+    ]
+}
+
+
+JWT_AUTH = { 
+    'JWT_SECRET_KEY': settings.SECRET_KEY, 
+    'JWT_ALGORITHM': 'HS256', 
+    'JWT_EXPIRATION_DELTA': datetime.timedelta(seconds=300), 
+    'JWT_ALLOW_REFRESH': True, 
+    'JWT_REFRESH_EXPIRATION_DELTA': datetime.timedelta(days=7), 
+}
+
+
+REST_USE_JWT = True

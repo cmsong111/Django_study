@@ -1,20 +1,18 @@
 from django.views.generic import DetailView
-from django.http import HttpResponse
 from django.views import generic
-import todolist
 from todolist.models import TodoList
 from django.shortcuts import get_object_or_404, render
-from django.template import loader
 from .models import TodoList
 from django.shortcuts import render, redirect
-from django.contrib.auth.models import User
-from django.utils import timezone
+from django.http import HttpResponseRedirect
+from .forms import TodolistForm
+from django.contrib.auth import get_user_model
+
 #from account.models import User
 
 # Create your views here.
 
 #def index(request):
-
 
 class IndexView(generic.ListView):
     template_name = 'index.html'
@@ -31,6 +29,17 @@ class todolistedit(DetailView):
     template_name = 'edit.html'
     model = TodoList
 
+
 def todolistnew(request):
-    template = loader.get_template('todolist/new.html')
-    return HttpResponse( template.render({}, request))
+    if request.method == 'POST':
+        form = TodolistForm(request.POST)
+        if form.is_valid():
+            temp = form.save(commit=False)
+            #temp.user = user.username
+            #temp.bool.. = true
+            temp.save()
+            return redirect('todolist:index')
+    else:   
+        form = TodolistForm()
+    context = {'form': form }
+    return render(request, 'new.html', context)
